@@ -1,0 +1,193 @@
+:root {
+    --dragon-dark: #0f0c29;
+    --dragon-mid: #302b63;
+    --dragon-light: #24243e;
+    --dragon-accent: #6a0dad;
+    --dragon-accent-glow: #9b59b6;
+    --dragon-text: #e0e0e0;
+    --dragon-text-highlight: #f5f5f5;
+
+    --discord-blurple: #5865F2;
+    --discord-blurple-hover: #4f5bda;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dragon-text);
+}
+
+.main-container {
+    background: linear-gradient(135deg, var(--dragon-dark), var(--dragon-mid), var(--dragon-light));
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+    overflow-y: auto;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    color: var(--dragon-text-highlight);
+    text-shadow: 0 0 10px var(--dragon-accent-glow), 0 0 20px var(--dragon-accent);
+}
+
+.lead {
+    font-weight: 300;
+    color: var(--dragon-text);
+}
+
+.fs-5 {
+    font-weight: 400;
+}
+
+.dragon-icon-container svg {
+    width: 80px;
+    height: 80px;
+    color: var(--dragon-accent-glow);
+    animation: pulseIcon 2.5s infinite ease-in-out;
+    filter: drop-shadow(0 0 15px var(--dragon-accent-glow));
+}
+.dragon-icon-container svg path:first-of-type {
+    animation: pulseYolk 2.5s infinite ease-in-out alternate;
+}
+
+
+@keyframes pulseIcon {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+@keyframes pulseYolk {
+    from { fill: var(--dragon-accent-glow); }
+    to { fill: #ffeb3b; }
+}
+
+
+.btn-discord {
+    background-color: var(--discord-blurple);
+    border-color: var(--discord-blurple);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-discord:hover, .btn-discord:focus {
+    background-color: var(--discord-blurple-hover);
+    border-color: var(--discord-blurple-hover);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+.btn-discord i {
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+
+.incubation-chamber {
+    width: 100%;
+    max-width: 300px;
+}
+
+.energy-orbs-container {
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.energy-orb {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    transition: background-color 0.5s ease-out, box-shadow 0.5s ease-out, transform 0.3s ease;
+    animation: pulseOrbInactive 3s infinite ease-in-out;
+}
+
+.energy-orb.active {
+    background-color: var(--dragon-accent-glow);
+    box-shadow: 0 0 10px var(--dragon-accent-glow), 0 0 20px var(--dragon-accent);
+    transform: scale(1.1);
+    animation: pulseOrbActive 1.5s infinite ease-in-out;
+}
+
+@keyframes pulseOrbInactive {
+    0%, 100% { opacity: 0.7; transform: scale(0.95); }
+    50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulseOrbActive {
+    0%, 100% { opacity: 0.8; transform: scale(1.05); }
+    50% { opacity: 1; transform: scale(1.15); }
+}
+
+
+.small-text {
+    font-size: 0.85rem;
+    color: var(--dragon-text);
+    opacity: 0.8;
+}
+
+footer {
+    opacity: 0.7;
+    font-size: 0.8rem;
+}
+
+/* Fade-in animation for elements */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-3 {
+        font-size: 2.8rem;
+    }
+    .lead {
+        font-size: 1.1rem;
+    }
+    .fs-5 {
+        font-size: 1rem;
+    }
+    .btn-discord {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    .energy-orb {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .dragon-icon-container svg {
+        width: 60px;
+        height: 60px;
+    }
+    .energy-orbs-container {
+        gap: 8px;
+    }
+    .energy-orb {
+        width: 15px;
+        height: 15px;
+    }
+}
