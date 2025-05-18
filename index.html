@@ -6,65 +6,85 @@
     <title>DreamingDragons.net - Something is Hatching...</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+          rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐉</text></svg>">
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐉</text></svg>">
 </head>
 <body>
 
-<div class="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center text-center text-white p-4 main-container">
+<div class="container-fluid vh-100 d-flex flex-column justify-content-center text-white p-4 main-container">
 
-    <div class="dragon-icon-container mb-4 fade-in">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-egg-fried" viewBox="0 0 16 16">
-            <path d="M8 15a4 4 0 0 0 4-4c0-1.293-.527-3.147-1.098-4.327C10.199 5.25 9.399 5 8.5 5H7.5c-.899 0-1.699.25-2.402.673C4.527 6.853 4 8.707 4 11a4 4 0 0 0 4 4zM5.884 6.33a.5.5 0 0 1 .33-.626c.402-.148.862-.23 1.286-.23s.884.082 1.286.23a.5.5 0 0 1 .33.626C8.94 7.062 8.71 7.5 8.5 7.5h-1c-.21 0-.44-.438-.516-1.17z"/>
-            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1z"/>
-        </svg>
-    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 mt-5 pt-5 text-center">
 
-    <h1 class="display-3 fw-bold mb-3 fade-in" style="font-family: 'Orbitron', sans-serif;">DreamingDragons.net</h1>
-
-    <p class="lead mb-3 fade-in">Shhh... the dragons are dreaming.</p>
-
-    <p class="fs-5 mb-4 fade-in">This domain has been claimed. Something magnificent is stirring in the ethereal mists, preparing for an epic awakening.</p>
-
-    <div class="discord-cta my-4 fade-in">
-        <a href="https://discord.com/invite/u6qFjfDDy2" target="_blank" class="btn btn-discord btn-lg">
-            <i class="bi bi-discord me-2"></i> Join the Dreamers
-        </a>
-        <p class="small-text mt-2">Connect while you await the reveal!</p>
-    </div>
-
-    <div class="incubation-chamber my-4 fade-in">
-        <p class="small-text mb-2">Incubation Progress:</p>
-        <div class="energy-orbs-container d-flex justify-content-center align-items-center">
-            <div class="energy-orb"></div>
-            <div class="energy-orb"></div>
-            <div class="energy-orb"></div>
-            <div class="energy-orb"></div>
-            <div class="energy-orb"></div>
+            <div class="dragon-icon-container mb-4 fade-in">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+                     class="bi bi-egg-fried" viewBox="0 0 16 16">
+                    <path d="M8 15a4 4 0 0 0 4-4c0-1.293-.527-3.147-1.098-4.327C10.199 5.25 9.399 5 8.5 5H7.5c-.899 0-1.699.25-2.402.673C4.527 6.853 4 8.707 4 11a4 4 0 0 0 4 4zM5.884 6.33a.5.5 0 0 1 .33-.626c.402-.148.862-.23 1.286-.23s.884.082 1.286.23a.5.5 0 0 1 .33.626C8.94 7.062 8.71 7.5 8.5 7.5h-1c-.21 0-.44-.438-.516-1.17z"/>
+                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1z"/>
+                </svg>
+            </div>
         </div>
-        <p id="progressStatusText" class="mt-2 small-text fade-in">Forging the future...</p>
+
+        <div class="col-12 text-center">
+            <h1 class="display-3 fw-bold mb-3 fade-in text-center" style="font-family: 'Orbitron', sans-serif;">
+                DreamingDragons.net</h1>
+            <p class="lead mb-3 fade-in">Shhh... the dragons are dreaming.</p>
+            <p class="fs-5 mb-4 fade-in">This domain has been claimed. Something magnificent is stirring in the ethereal
+                mists, preparing for an epic awakening.</p>
+
+        </div>
+
+        <div class="col-12 text-center">
+            <div class="discord-cta my-4 fade-in">
+                <a href="https://discord.com/invite/u6qFjfDDy2" target="_blank" class="btn btn-discord btn-lg">
+                    <i class="bi bi-discord me-2"></i> Join the Dreamers
+                </a>
+                <p class="small-text mt-2">Connect while you await the reveal!</p>
+            </div>
+        </div>
+
+        <div class="col-12 text-center mt-3">
+            <div class="mx-auto incubation-chamber my-4 fade-in">
+                <p class="small-text mb-2">Incubation Progress:</p>
+                <div class="energy-orbs-container d-flex justify-content-center align-items-center">
+                    <div class="energy-orb"></div>
+                    <div class="energy-orb"></div>
+                    <div class="energy-orb"></div>
+                    <div class="energy-orb"></div>
+                    <div class="energy-orb"></div>
+                </div>
+                <p id="progressStatusText" class="mt-2 small-text fade-in">Forging the future...</p>
+            </div>
+            <p class="mt-5 fade-in">Patience, adventurer. The greatest treasures are worth the wait.</p>
+        </div>
+
     </div>
 
-    <p class="mt-4 fade-in">Patience, adventurer. The greatest treasures are worth the wait.</p>
-
-    <footer class="mt-auto fade-in">
-        <small>© <span id="currentYear"></span> DreamingDragons.net - <a class="link-light text-decoration-none" href="https://archangelgca.eu" target="_blank">ArchangelGCA</a> - All rights reserved (soon!)</small>
+    <footer class="mt-auto text-center fade-in">
+        <small>© <span id="currentYear"></span> DreamingDragons.net - <a class="link-light text-decoration-none"
+                                                                         href="https://archangelgca.eu" target="_blank">ArchangelGCA</a>
+            - All rights reserved (soon!)</small>
     </footer>
 </div>
 
 <!--  JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 <script src="script.js"></script>
 </body>
 </html>
