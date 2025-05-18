@@ -1,11 +1,15 @@
 :root {
-    --dragon-dark: #0f0c29;
-    --dragon-mid: #302b63;
-    --dragon-light: #24243e;
-    --dragon-accent: #6a0dad;
-    --dragon-accent-glow: #9b59b6;
-    --dragon-text: #e0e0e0;
-    --dragon-text-highlight: #f5f5f5;
+    --theme-dark: #1a142f;
+    --theme-mid: #0f2c4b;
+    --theme-light-bg: #004a5a;
+
+    --theme-accent-primary: #00a594;
+    --theme-accent-glow: #20dde0;
+
+    --theme-text: #cce0e5;
+    --theme-text-highlight: #f0f8ff;
+
+    --theme-icon-yolk-highlight: #80fbfb;
 
     --discord-blurple: #5865F2;
     --discord-blurple-hover: #4f5bda;
@@ -15,11 +19,11 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    color: var(--dragon-text);
+    color: var(--theme-text);
 }
 
 .main-container {
-    background: linear-gradient(135deg, var(--dragon-dark), var(--dragon-mid), var(--dragon-light));
+    background: linear-gradient(135deg, var(--theme-dark), var(--theme-mid), var(--theme-light-bg));
     background-size: 200% 200%;
     animation: gradientShift 15s ease infinite;
     overflow-y: auto;
@@ -32,13 +36,13 @@ body, html {
 }
 
 h1 {
-    color: var(--dragon-text-highlight);
-    text-shadow: 0 0 10px var(--dragon-accent-glow), 0 0 20px var(--dragon-accent);
+    color: var(--theme-text-highlight);
+    text-shadow: 0 0 10px var(--theme-accent-glow), 0 0 20px var(--theme-accent-primary);
 }
 
 .lead {
     font-weight: 300;
-    color: var(--dragon-text);
+    color: var(--theme-text);
 }
 
 .fs-5 {
@@ -48,9 +52,9 @@ h1 {
 .dragon-icon-container svg {
     width: 80px;
     height: 80px;
-    color: var(--dragon-accent-glow);
+    color: var(--theme-accent-glow);
     animation: pulseIcon 2.5s infinite ease-in-out;
-    filter: drop-shadow(0 0 15px var(--dragon-accent-glow));
+    filter: drop-shadow(0 0 15px var(--theme-accent-glow));
 }
 .dragon-icon-container svg path:first-of-type {
     animation: pulseYolk 2.5s infinite ease-in-out alternate;
@@ -68,8 +72,8 @@ h1 {
     }
 }
 @keyframes pulseYolk {
-    from { fill: var(--dragon-accent-glow); }
-    to { fill: #ffeb3b; }
+    from { fill: var(--theme-accent-glow); }
+    to { fill: var(--theme-icon-yolk-highlight); }
 }
 
 
@@ -109,16 +113,17 @@ h1 {
 .energy-orb {
     width: 20px;
     height: 20px;
-    background-color: rgba(255, 255, 255, 0.15);
+    /* Using rgba version of --theme-text for inactive orbs */
+    background-color: rgba(204, 224, 229, 0.15); /* Based on new --theme-text: #cce0e5 */
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 5px rgba(204, 224, 229, 0.1); /* Based on new --theme-text */
     transition: background-color 0.5s ease-out, box-shadow 0.5s ease-out, transform 0.3s ease;
     animation: pulseOrbInactive 3s infinite ease-in-out;
 }
 
 .energy-orb.active {
-    background-color: var(--dragon-accent-glow);
-    box-shadow: 0 0 10px var(--dragon-accent-glow), 0 0 20px var(--dragon-accent);
+    background-color: var(--theme-accent-glow);
+    box-shadow: 0 0 10px var(--theme-accent-glow), 0 0 20px var(--theme-accent-primary);
     transform: scale(1.1);
     animation: pulseOrbActive 1.5s infinite ease-in-out;
 }
@@ -136,7 +141,7 @@ h1 {
 
 .small-text {
     font-size: 0.85rem;
-    color: var(--dragon-text);
+    color: var(--theme-text);
     opacity: 0.8;
 }
 
@@ -144,6 +149,14 @@ footer {
     opacity: 0.7;
     font-size: 0.8rem;
 }
+footer a.link-light {
+    color: var(--theme-accent-primary) !important;
+    text-decoration: none;
+}
+footer a.link-light:hover {
+    color: var(--theme-text-highlight) !important;
+}
+
 
 /* Fade-in animation for elements */
 .fade-in {
@@ -157,7 +170,6 @@ footer {
     transform: translateY(0);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .display-3 {
         font-size: 2.8rem;
